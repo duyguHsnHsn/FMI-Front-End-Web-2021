@@ -33,6 +33,11 @@ body{
    padding-bottom:8px;
    padding-top: 8px;
 }
+.flutter input:focus{
+    border:none;
+    outline: none;
+    border-bottom: 2px solid #99A2EC;
+}
 .flutter button, .flutter a {
     display: block;
 }
@@ -53,9 +58,4 @@ body{
     text-decoration: none;
 }
 
-@media all and (max-width: 890px){
-    .flutter input{
-        border:none;
-        border-bottom: 2px solid #99A2EC;
-    }
-}
+
