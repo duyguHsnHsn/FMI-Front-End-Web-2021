@@ -19,6 +19,9 @@ header {
 header .search {
   position: relative;
 }
+header h1 {
+  font-weight: lighter;
+}
 .search .fa {
   position: absolute;
   top: 0.4rem;
@@ -59,6 +62,7 @@ main .profile-info .pic-name {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10px;
 }
 main .profile-info .pic-name h2 {
   font-size: 100%;
@@ -110,27 +114,12 @@ main .posts header {
   background-color: #f6f7fd;
 }
 main .posts header img {
-  max-width: 5%;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
 }
-main .posts header .post {
-  width: 25rem;
-  color: #69c5db;
-}
-.post .fa {
-  position: absolute;
-  top: 0.4rem;
-  left: 23rem;
-}
-.posts{
-    margin-left: 10px;
-}
-.gradientBackgroundMain main .posts header input {
-  margin-left: 20px;
-  width: 100%;
-  color: #69c5db;
-  box-shadow: 0px 0px 5px 1px lightgray;
-  background-color: white;
+.posts {
+  margin-left: 10px;
 }
 .gradientBackgroundMain main .user-post {
   display: flex;
@@ -138,41 +127,156 @@ main .posts header .post {
   background-color: white;
 }
 .user-post {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding:10px;
-    border-top: 2px solid lightgray;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  border-top: 2px solid lightgray;
+}
+.user-post img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0 3%;
+}
+.user-post div {
+  max-width: 70%;
+}
+.user-post .fa-times {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  color: #a2a4af;
+}
+.user-post .name {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.user-post div .name {
+  font-weight: bold;
+}
+.user-post div span {
+  color: gray;
+}
+.user-post div .fa-circle {
+  font-size: 1%;
+  vertical-align: middle;
+}
+.user-post .likes button {
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  margin: 1%;
+}
+.posts .post-something {
+  position: relative;
+  width: 80%;
+}
+.posts .post-something input {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 5px 1px lightgray;
+  margin-left: 20px;
+  border-radius: 16px;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+}
+.posts .post-something input::placeholder {
+  color: #69c5db;
+}
+.posts .post-something i {
+  position: absolute;
+  top: 11px;
+  right: 1px;
+  font-size: 1.2rem;
+  color: #69c5db;
 }
 
-.user-post img{
-   width: 7%;
-   height: 7%;
-   border-radius: 50%;
-   margin:0 3%;
-}
-.user-post div{
-    max-width: 70%;
-}
-.user-post .fa-times{
-    position: absolute;
-    top: 3%;
-    right: 2%;
-}
-.user-post div .name{
-    font-weight: bold;
-}
-.user-post div span{
-    color: gray;
-}
-.user-post div .fa-circle{
-    font-size: 1%;
-    vertical-align: middle;
-}
-.user-post .likes button{
-    border:none;
+@media all and (max-width: 890px) {
+  header {
+    display: flex;
+    align-items: flex-end;
+    padding: 5px;
+    justify-content: center;
+  }
+  header h1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+  }
+  .gradientBackgroundMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: max-content;
+  }
+  .gradientBackgroundMain .profile-info{
+    width:90%;
+  }
+  .gradientBackgroundMain .profile-info,
+  .gradientBackgroundMain .posts {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .gradientBackgroundMain .profile-info {
     background-color: white;
-    font-size: 16px;
-    margin: 1%;
+    display: flex;
+    flex-direction: column;
+  }
+  main .profile-info img {
+    max-width: 100%;
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+  main .profile-info .actions {
+    height: 3.75rem;
+  }
+  main .profile-info .action-number {
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .profile-info .action-number p:first-child {
+    font-size: 0.75rem;
+  }
+  main .profile-info .action-number p:last-child {
+    font-size: 1.125rem;
+  }
+  main .profile-info button {
+    height: 2rem;
+  }
+  .posts{
+    margin-left: 0px;
+  }
+  .posts .post-something {
+    position: relative;
+    width: 80%;
+  }
+  .posts .post-something input {
+    width: 100%;
+    font-size: 12px;
+  }
+  .posts .post-something i {
+    top: 9px;
+    right: 23px;
+    font-size: 15px;
+  }
+  .posts .post-something {
+    max-width: 90%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .posts main article{
+    padding:1rem;
+    min-height: 7rem;
+    font-size: 0.875rem;
+  }
+  .posts main article .fa-circle{
+    font-size: 50%;
+  }
 }
